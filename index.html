@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>โปรเจ็คแนะนำตัว | ครูภาณุเมศ ชุมภูนท์</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="bg-gradient" aria-hidden="true"></div>
+  <canvas id="particles" aria-hidden="true"></canvas>
+
+  <nav class="navbar">
+    <a href="#" class="logo">
+      <span class="logo-icon">✦</span>
+      <span>แนะนำตัว</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#home">หน้าแรก</a></li>
+      <li><a href="#teacher">ครูผู้สอน</a></li>
+      <li><a href="#students">นักเรียน</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="เปิดเมนู" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <p class="hero-badge">
+          <span class="badge-dot"></span>
+          ปีการศึกษา 2569
+        </p>
+        <h1 class="hero-title">
+          โปรเจ็ค<span class="gradient-text">แนะนำตัว</span>
+        </h1>
+        <p class="hero-subtitle">
+          รวมผลงานจากนักเรียน <strong>14 คน</strong> — มาร่วมรู้จักกันและกัน
+        </p>
+        <div class="hero-actions">
+          <a href="#teacher" class="btn btn-primary">ดูครูผู้สอน</a>
+          <a href="#students" class="btn btn-outline">ดูนักเรียนทั้งหมด</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-number" data-count="14">0</span>
+            <span class="stat-label">นักเรียน</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number" data-count="1">0</span>
+            <span class="stat-label">ครูผู้สอน</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number" data-count="14">0</span>
+            <span class="stat-label">หน้าแนะนำตัว</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="orbit-ring ring-1"></div>
+        <div class="orbit-ring ring-2"></div>
+        <div class="orbit-ring ring-3"></div>
+        <div class="floating-card card-1">👋 สวัสดี!</div>
+        <div class="floating-card card-2">🎨 Creative</div>
+        <div class="floating-card card-3">💻 Code</div>
+      </div>
+    </section>
+
+    <section id="teacher" class="teacher-section">
+      <div class="section-header">
+        <span class="section-tag">ครูผู้สอน</span>
+        <h2>รู้จัก<span class="gradient-text">ครูภาณุเมศ</span></h2>
+        <p>ผู้นำทีมและแนะนำโปรเจ็คแนะนำตัวของนักเรียนทั้ง 14 คน</p>
+      </div>
+
+      <div class="teacher-card">
+        <div class="teacher-image-wrap">
+          <div class="teacher-image-glow"></div>
+          <img
+            src="images/teacher.jpg"
+            alt="รูปภาพ ครูภาณุเมศ ชุมภูนท์"
+            class="teacher-image"
+            onerror="this.src='https://ui-avatars.com/api/?name=ภาณุเมศ&background=6366f1&color=fff&size=400&font-size=0.4'"
+          >
+          <div class="teacher-badge">ครูผู้สอน</div>
+        </div>
+        <div class="teacher-info">
+          <h3 class="teacher-name">ครูภาณุเมศ ชุมภูนท์</h3>
+          <p class="teacher-role">ครูผู้รับผิดชอบโปรเจ็ค</p>
+          <p class="teacher-desc">
+            ยินดีต้อนรับสู่โปรเจ็คแนะนำตัว! โปรเจ็คนี้เป็นโอกาสให้นักเรียนแต่ละคน
+            ได้แสดงความเป็นตัวเองผ่านเว็บไซต์ที่ออกแบบด้วยตนเอง
+            มาร่วมเรียนรู้และสร้างสรรค์ไปด้วยกัน
+          </p>
+          <ul class="teacher-tags">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Teamwork</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="students" class="students-section">
+      <div class="section-header">
+        <span class="section-tag">นักเรียน</span>
+        <h2>ทีม<span class="gradient-text">14 คน</span></h2>
+        <p>คลิกที่การ์ดเพื่อดูหน้าแนะนำตัวของแต่ละคน</p>
+      </div>
+
+      <div class="students-grid" id="studentsGrid">
+        <!-- สร้างการ์ดนักเรียน 20 คนโดย script.js -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2569 โปรเจ็คแนะนำตัว — สร้างโดยนักเรียนร่วมกับ <strong>ครูภาณุเมศ ชุมภูนท์</strong></p>
+    <p class="footer-note">แต่ละนักเรียนสามารถแก้ไขหน้าของตัวเองในโฟลเดอร์ <code>students/</code></p>
+  </footer>
+
+  <script id="students-data" type="application/json">
+  [
+    { "id": 1, "name": "นายชินดนัย ธัญญภู", "studentId": "68319010002" },
+    { "id": 2, "name": "นายนันทสิทธิ์ จินดา", "studentId": "68319010003" },
+    { "id": 3, "name": "นายปฏิภาณ พรหมแสนปัง", "studentId": "68319010004" },
+    { "id": 4, "name": "นายกมลเทพ โสภา", "studentId": "68319010005" },
+    { "id": 5, "name": "นายติณณ์ภัทร เกาะแก้ว", "studentId": "68319010008" },
+    { "id": 6, "name": "นายธีรยุทธ สุดเต้", "studentId": "68319010009" },
+    { "id": 7, "name": "นายวรินทร หมื่นสุข", "studentId": "68319010013" },
+    { "id": 8, "name": "นายศิวัฒน์ คำแก้ว", "studentId": "68319010016" },
+    { "id": 9, "name": "นางสาวกนกพิชญ์ ไชยสีดา", "studentId": "68319010017" },
+    { "id": 10, "name": "นางสาวกันนิชา ศาลาคำ", "studentId": "68319010018" },
+    { "id": 11, "name": "นางสาวพรวิภา โททวง", "studentId": "68319010019" },
+    { "id": 12, "name": "นางสาวรัตน์วรา สงนำมา", "studentId": "68319010020" },
+    { "id": 13, "name": "นางสาวสุนิษา บุญหมั่น", "studentId": "68319010021" },
+    { "id": 14, "name": "นางสาวอริยาภรณ์ อุดมฤทธิ์", "studentId": "68319010022" }
+  ]
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>
