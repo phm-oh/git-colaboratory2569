@@ -153,7 +153,7 @@ function createStudentCard(student, exists) {
     <div class="student-number">STUDENT ${String(number).padStart(2, '0')}</div>
     <div class="student-avatar">${getInitials(name)}</div>
     <div class="student-name">${name}</div>
-    <div class="student-id">${studentId}</div>
+    ${studentId ? `<div class="student-id">${studentId}</div>` : ''}
     <div class="student-status">${exists ? 'พร้อมแล้ว' : 'รอสร้างหน้า...'}</div>
   `;
 
