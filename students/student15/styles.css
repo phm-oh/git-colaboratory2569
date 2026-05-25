@@ -1,0 +1,115 @@
+:root {
+  --bg: #0b0b13;
+  --surface: #14141e;
+  --accent: #ff1f5b;
+  --accent2: #3a6bff;
+  --text: #f5f5f5;
+  --muted: #9aa0b4;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: "Sarabun", Arial, sans-serif;
+  background: radial-gradient(circle at top, #191a2a 0%, #09090f 60%);
+  color: var(--text);
+}
+.card {
+  width: min(420px, calc(100vw - 32px));
+  background: linear-gradient(180deg, rgba(22, 22, 34, 0.98), rgba(12, 12, 18, 0.98));
+  border: 1px solid rgba(255, 31, 91, 0.18);
+  border-radius: 28px;
+  padding: 28px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+}
+.profile-photo {
+  width: 118px;
+  height: 118px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid rgba(255, 31, 91, 0.8);
+  background: linear-gradient(135deg, rgba(58, 107, 255, 0.25), rgba(255, 31, 91, 0.25));
+}
+.profile-photo img {
+  width: 100%;
+  height: 110%;
+  object-fit: cover;
+  display: block;
+}
+.content h2 {
+  margin: 0 0 8px;
+  font-size: 20px;
+  
+  text-align: center;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.details {
+  display: grid;
+  gap: 8px;
+  margin: 0 auto 18px;
+  max-width: 320px;
+  text-align: center;
+}
+.detail {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+.detail span {
+  color: var(--text);
+  font-weight: 700;
+}
+.caption {
+  margin: 0 auto 22px;
+  max-width: 320px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.stats {
+  display: grid;
+  gap: 16px;
+}
+.stat {
+  display: grid;
+  gap: 8px;
+}
+.stat span {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+.bar {
+  width: 100%;
+  height: 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+.fill {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  box-shadow: 0 0 20px rgba(255, 31, 91, 0.3);
+}
+.percent {
+  font-size: 0.88rem;
+  color: #c9d0ff;
+}
+@media (max-width: 460px) {
+  .card {
+    padding: 22px;
+  }
+  .caption {
+    max-width: 100%;
+  }
+}
