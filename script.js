@@ -145,7 +145,7 @@ async function checkStudentPageExists(number) {
 function createStudentCard(student, exists) {
   const { id: number, name, studentId } = student;
   const card = document.createElement('a');
-  card.href = `students/student${number}.html`;
+  card.href = `students/student${number}/student${number}.html`;
   card.className = `student-card${exists ? ' ready' : ''}`;
   card.style.transitionDelay = `${(number - 1) * 0.05}s`;
 
