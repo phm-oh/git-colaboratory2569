@@ -133,19 +133,36 @@ function initScrollReveal() {
 }
 
 /* ===== Student Cards ===== */
-async function checkStudentPageExists(number) {
+async function checkPathExists(path) {
   try {
-    const response = await fetch(`students/student${number}.html`, { method: 'HEAD' });
+    const response = await fetch(path, { method: 'HEAD' });
     return response.ok;
   } catch {
     return false;
   }
 }
 
-function createStudentCard(student, exists) {
+async function resolveStudentPagePath(number) {
+  const paths = [
+    `students/student${number}.html`,
+    `students/student${number}/student${number}.html`,
+    `students/student${number}/index.html`
+  ];
+
+  for (const path of paths) {
+    if (await checkPathExists(path)) {
+      return path;
+    }
+  }
+
+  return null;
+}
+
+function createStudentCard(student, pagePath) {
   const { id: number, name, studentId } = student;
+  const exists = Boolean(pagePath);
   const card = document.createElement('a');
-  card.href = `students/student${number}/student${number}.html`;
+  card.href = pagePath || '#';
   card.className = `student-card${exists ? ' ready' : ''}`;
   card.style.transitionDelay = `${(number - 1) * 0.05}s`;
 
@@ -175,12 +192,12 @@ async function buildStudentGrid() {
   if (!grid) return;
 
   const students = getStudents();
-  const checks = await Promise.all(
-    students.map((s) => checkStudentPageExists(s.id))
+  const paths = await Promise.all(
+    students.map((student) => resolveStudentPagePath(student.id))
   );
 
   students.forEach((student, index) => {
-    grid.appendChild(createStudentCard(student, checks[index]));
+    grid.appendChild(createStudentCard(student, paths[index]));
   });
 
   initScrollReveal();
