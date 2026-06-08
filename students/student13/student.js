@@ -15,5 +15,17 @@ function typingEffect(){
 typingEffect();
 
 function changeMode(){
+
   document.body.classList.toggle("dark");
+
+  let button = document.querySelector("button");
+
+  if(document.body.classList.contains("dark")){
+    button.innerHTML = "☀️ เปลี่ยนโหมดตะเว็นเว็นเว็น";
+  }
+
+  else{
+    button.innerHTML = "🌙 เปลี่ยนเป็นโหมดอีเกิ้ง";
+  }
+
 }
