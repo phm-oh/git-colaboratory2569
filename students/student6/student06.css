@@ -40,6 +40,7 @@ canvas {
 }
 
 .profile-card {
+	position: relative;
 	pointer-events: all;
 	width: 340px;
 	backdrop-filter: blur(28px) saturate(140%);
@@ -58,6 +59,47 @@ canvas {
 	transform: translateY(-3px);
 	box-shadow: 0 0 30px rgba(79, 172, 254, 0.8), 0 38px 90px rgba(0, 0, 0, 0.65), inset 0 0 30px rgba(79, 172, 254, 0.15);
 	transition: box-shadow 0.3s ease;
+}
+
+.extra-card {
+	position: relative;
+	left: auto;
+	bottom: auto;
+	transform: translateY(-12px);
+	width: calc(100% - 36px);
+	margin: 14px 18px 18px;
+	padding: 0 18px;
+	background: rgba(12, 24, 46, 0.96);
+	border: 1px solid rgba(79, 172, 254, 0.2);
+	border-radius: 18px;
+	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+	overflow: hidden;
+	opacity: 0;
+	max-height: 0;
+	pointer-events: none;
+	transition: transform .3s ease, opacity .3s ease, max-height .3s ease, padding .3s ease, margin .3s ease;
+	z-index: 1;
+}
+
+.profile-card:hover .extra-card {
+	opacity: 1;
+	transform: translateY(0);
+	max-height: 220px;
+	padding: 16px 18px;
+}
+
+.intro-title {
+	font-size: 11px;
+	letter-spacing: .12em;
+	text-transform: uppercase;
+	color: #67d8ff;
+	margin-bottom: 8px;
+}
+
+.intro-text {
+	font-size: 13px;
+	color: rgba(255, 255, 255, 0.92);
+	line-height: 1.7;
 }
 
 .profile-card.glow {
