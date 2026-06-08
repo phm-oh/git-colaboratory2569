@@ -1,0 +1,31 @@
+const text = "จบอาหารมาเรียนไอที (ทำไม)❔🥑";
+let index = 0;
+
+function typingEffect(){
+  document.querySelector(".typing").innerHTML =
+  text.slice(0,index);
+
+  index++;
+
+  if(index <= text.length){
+    setTimeout(typingEffect,100);
+  }
+}
+
+typingEffect();
+
+function changeMode(){
+
+  document.body.classList.toggle("dark");
+
+  let button = document.querySelector("button");
+
+  if(document.body.classList.contains("dark")){
+    button.innerHTML = "☀️ เปลี่ยนโหมดตะเว็นเว็นเว็น";
+  }
+
+  else{
+    button.innerHTML = "🌙 เปลี่ยนเป็นโหมดอีเกิ้ง";
+  }
+
+}
