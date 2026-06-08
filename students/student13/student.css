@@ -1,0 +1,252 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial;
+}
+
+body{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  background: linear-gradient(-45deg,#ff9a9e,#fad0c4,#a18cd1,#84fab0);
+  background-size:400% 400%;
+  animation:bg 10s ease infinite;
+}
+
+@keyframes bg{
+  0%{
+    background-position:0% 50%;
+  }
+
+  50%{
+    background-position:100% 50%;
+  }
+
+  100%{
+    background-position:0% 50%;
+  }
+}
+
+.profile-card{
+  width:400px;
+  background:white;
+  padding:50px;
+  border-radius:25px;
+  text-align:center;
+
+  box-shadow:0 10px 25px rgba(0,0,0,0.2);
+
+  transition:0.4s;
+}
+
+.profile-card:hover{
+  transform:translateY(-10px);
+}
+
+.profile-card img{
+  width:130px;
+  height:130px;
+
+  border-radius:50%;
+  object-fit:cover;
+
+  border:5px solid hotpink;
+
+  transition:0.5s;
+}
+
+.profile-card img:hover{
+  transform:scale(1.1) rotate(5deg);
+}
+
+h1{
+  margin-top:15px;
+  color:#333;
+}
+
+.typing{
+  margin:10px 0;
+  color:#777;
+  height:20px;
+}
+
+.info{
+  margin-top:20px;
+}
+
+.info div{
+  background:#f3f3f3;
+  padding:10px;
+  margin:10px 0;
+  border-radius:10px;
+}
+
+button{
+  margin-top:20px;
+  padding:12px 20px;
+
+  border:none;
+  border-radius:12px;
+
+  background:hotpink;
+  color:white;
+
+  cursor:pointer;
+
+  transition:0.3s;
+}
+
+button:hover{
+  transform:scale(1.05);
+  background:#ff1493;
+}
+
+.dark{
+  background:#222 !important;
+}
+
+.dark .profile-card{
+  background:#333;
+  color:white;
+}
+
+.dark .info div{
+  background:#444;
+}
+.dark h1,
+.dark p,
+.dark .typing,
+.dark .info div,
+.dark button{
+  color:white;
+}
+/* ให้วงกลมอิงกับการ์ด */
+.profile-card{
+  position:relative;
+}
+
+/* ดาว */
+
+.stars span{
+
+  position:absolute;
+
+  width:4px;
+  height:4px;
+
+  background:white;
+
+  border-radius:50%;
+
+  animation:blink 2s infinite;
+}
+
+/* ตำแหน่งดาว */
+
+.stars span:nth-child(1){
+  top:10%;
+  left:20%;
+}
+
+.stars span:nth-child(2){
+  top:30%;
+  left:80%;
+}
+
+.stars span:nth-child(3){
+  top:70%;
+  left:10%;
+}
+
+.stars span:nth-child(4){
+  top:80%;
+  left:60%;
+}
+
+.stars span:nth-child(5){
+  top:50%;
+  left:40%;
+}
+
+.stars span:nth-child(6){
+  top:15%;
+  left:70%;
+}
+
+.stars span:nth-child(7){
+  top:60%;
+  left:90%;
+}
+
+.stars span:nth-child(8){
+  top:90%;
+  left:30%;
+}
+
+/* วิบวับ */
+
+@keyframes blink{
+
+  0%{
+    opacity:0.2;
+    transform:scale(1);
+  }
+
+  50%{
+    opacity:1;
+    transform:scale(2);
+  }
+
+  100%{
+    opacity:0.2;
+    transform:scale(1);
+  }
+
+}
+.social{
+
+  position:absolute;
+
+  margin-top:640px;
+
+  display:flex;
+
+  gap:12px;
+}
+
+.social a{
+
+  text-decoration:none;
+
+  background:white;
+
+  color:#333;
+
+  padding:10px 16px;
+
+  border-radius:12px;
+
+  box-shadow:0 5px 15px rgba(0,0,0,0.15);
+
+  transition:0.3s;
+}
+
+.social a:hover{
+
+  transform:translateY(-4px);
+
+  background:hotpink;
+
+  color:white;
+  
+}
+
+.dark .social a{
+
+  background:#444;
+
+  color:white;
+}
