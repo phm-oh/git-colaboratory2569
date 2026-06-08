@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hacker Profile | ณัฐกรณ์</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <canvas id="matrixCanvas" aria-hidden="true"></canvas>
+  <div class="sparkle-layer" aria-hidden="true"></div>
+
+  <main class="desktop">
+    <section class="terminal-window profile-terminal" aria-label="ข้อมูลโปรไฟล์">
+      <div class="window-bar">
+        <span class="window-icon">X</span>
+        <span class="window-title">Programming Console</span>
+        <span class="window-status">Access Granted</span>
+      </div>
+
+      <div class="terminal-grid">
+        <div class="profile-photo">
+          <img src="./image/dum.png" alt="รูปโปรไฟล์ของณัฐกรณ์" />
+        </div>
+
+        <div class="content">
+          <p class="command-line">import profile.student15</p>
+          <h1>นายณัฐกรณ์ </h1>
+          <h1> อุเทนหลอย</h1>
+
+          <div class="details">
+            <p class="detail"><span>รายวิชา:</span> หมอบยังไงไม่ให้โดนลม</p>
+            <p class="detail"><span>ครูผู้สอน:</span> ครูโอ้ Mazda Cx5 โหลดเตี้ยซิ่งๆ</p>
+          </div>
+
+          <p class="caption">แว้น ยกล้อ หมอบ ท่อดัง แต่งรถ จัดหนักทุกทางโค้ง</p>
+
+          <button id="toggleCaption" class="terminal-button" type="button">
+            <span>EXECUTE NEXT MESSAGE</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="side-panels" aria-label="ค่าสถานะ">
+      <article class="terminal-window mini-panel">
+        <div class="window-bar">
+          <span class="window-title">System Stats</span>
+          <span class="window-status">Online</span>
+        </div>
+        <div class="stats">
+          <div class="stat">
+            <div class="stat-top">
+              <span>ยกล้อ</span>
+              <span class="percent">92%</span>
+            </div>
+            <div class="bar"><div class="fill" style="width: 92%"></div></div>
+          </div>
+          <div class="stat">
+            <div class="stat-top">
+              <span>แว้น</span>
+              <span class="percent">85%</span>
+            </div>
+            <div class="bar"><div class="fill" style="width: 85%"></div></div>
+          </div>
+          <div class="stat">
+            <div class="stat-top">
+              <span>ท่อดัง</span>
+              <span class="percent">100%</span>
+            </div>
+            <div class="bar"><div class="fill" style="width: 100%"></div></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="terminal-window mini-panel code-panel">
+        <div class="window-bar">
+          <span class="window-title">Decoding Console</span>
+          <span class="window-status">Running</span>
+        </div>
+        <pre><code>if speed &gt; wind_limit:
+    crouch_mode = True
+    exhaust_level = "MAX"
+    corner_style = "clean"
+
+print("student15 ready")</code></pre>
+      </article>
+    </section>
+  </main>
+
+  <footer class="taskbar" aria-label="แถบสถานะ">
+    <span>start</span>
+    <span>Programming Console</span>
+    <span>Decoding Console</span>
+    <span class="power">Power ==</span>
+    <time id="clock">00:00:00</time>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
